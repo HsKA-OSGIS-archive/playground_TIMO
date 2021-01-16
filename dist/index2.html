@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TourApp-karlsruhe</title>
+    <!-- css bootsrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.e308ff8e.css">
+    <link rel="manifest" href="/manifest.js">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="TourApp-karlsruhe">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="TourApp-karlsruhe">
+    <link rel="apple-touch-icon" href="/apple-icon-57x57.2696ed24.png" sizes="57x57">
+    <link rel="apple-touch-icon" href="/apple-icon-60x60.d02f576a.png" sizes="60x60">
+    <link rel="apple-touch-icon" href="/apple-icon-72x72.872d575c.png" sizes="72x72">
+    <link rel="apple-touch-icon" href="/apple-icon-76x76.374e376c.png" sizes="76x76">
+    <link rel="apple-touch-icon" href="/apple-icon-114x114.01180f62.png" sizes="114x114">
+    <link rel="apple-touch-icon" href="/apple-icon-120x120.7061c1b4.png" sizes="120x120">
+    <link rel="apple-touch-icon" href="/apple-icon-144x144.bb0dc350.png" sizes="144x144">
+    <link rel="apple-touch-icon" href="/apple-icon-152x152.5976ac12.png" sizes="152x152">
+    <link rel="apple-touch-icon" href="/apple-icon-180x180.2778190a.png" sizes="180x180">
+    <meta name="msapplication-TileImage" content="/app-icon-144x144.7946f3b1.png">
+    <meta name="msapplication-TileColor" content="#fff">
+    <meta name="theme-color" content="#3f51b5">
+
+<script src="/style.e308ff8e.js"></script><link rel="stylesheet" href="/main2.5296b8f0.css"></head>>
+
+<body>
+    <div class="title">
+        <h1>Karlsruhe Toursits App</h1>
+    </div>
+    <div class="both">
+        <div class="choice">
+            <div class="btn-group">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Food and Drinks  
+                    <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li> <button id="btn1" type="button" value="restaurant" style="width: 100%"> restaurant</button></li>
+                    <li class="divider"></li>>
+                    <li> <button id="btn3" type="button" value="cafe" style="width: 100%">cafe</button></li>
+                    <li class="divider"></li>
+                    <li> <button id="btn4" type="button" value="bar" style="width: 100%">bar</button></li>
+                    <li class="divider"></li>
+                </ul>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Entertainment  
+                    <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li> <button id="btn5" type="button" value="cinema" style="width: 100%">cinema</button></li>
+                    <li class="divider"></li>
+                    <li> <button id="btn6" type="button" value="theatre" style="width: 100%"> theatre </button></li>
+                    <li class="divider"></li>
+                    <li> <button id="btn7" type="button" value="nihtclub" style="width: 100%">nightclub</button></li>
+                </ul>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Accomodtion 
+                    <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li> <button id="btn9" type="button" value="hostel" style="width: 100%"> hostel</button></li>
+                    <li class="divider"></li>
+                    <li> <button id="btn10" type="button" value="hotel" style="width: 100%"> hotel </button></li>
+                    <li class="divider"></li>
+                    <!-- <li> <button id = "btn11" type="button" value="guestHouse" onclick="guestHouse()" style="width: 100%">guestHouse</button></li>
+                    <li class="divider"></li> -->
+                    <li> <button id="btn12" type="button" value="taxi" style="width: 100%">taxi</button></li>
+                    <li class="divider"></li>
+                </ul>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Picnic  
+                    <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li> <button id="btn13" type="button" value="park" onclick="park()" style="width: 100%"> park</button></li>
+                    <li class="divider"></li>
+                    <li> <button id="btn14" type="button" value="zoo" onclick="zoo()" style="width: 100%"> zoo </button></li>
+                    <li class="divider"></li>
+                    <li> <button id="btn15" type="button" value="campSite" onclick="campSite()" style="width: 100%">campSite</button></li>
+                    <li class="divider"></li>
+                    <li> <button id="btn16" type="button" value="museum" onclick="museum()" style="width: 100%">museum</button></li>
+                    <li class="divider"></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- map -->
+        <div class="map" id="mymap">
+            <div class="tooltip" id="tooltip"></div>   
+        </div>
+    </div>
+    <!-- js bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!-- custom js -->
+    <script src="/main2.5296b8f0.js"></script>
+    <script src="/app.c328ef1a.js"></script>
+
+</body>
+</html>
