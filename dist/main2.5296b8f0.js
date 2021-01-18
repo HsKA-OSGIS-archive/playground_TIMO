@@ -58625,8 +58625,8 @@ var map = new _ol2.Map({
       attributions: 'created for tourist app'
     })
   })]
-});
-console.log(map); //tooltip
+}); //console.log(map);
+//tooltip
 
 var tooltip = document.getElementById('tooltip');
 var overlayed = new _Overlay.default({
@@ -58679,7 +58679,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49836" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50220" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

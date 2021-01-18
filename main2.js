@@ -318,7 +318,7 @@ var map = new Map({
         })
     })],
 });
-console.log(map);
+//console.log(map);
 
 //tooltip
 var tooltip = document.getElementById('tooltip');
