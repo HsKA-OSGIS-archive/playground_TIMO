@@ -58625,32 +58625,38 @@ var map = new _ol2.Map({
       attributions: 'created for tourist app'
     })
   })]
-}); //console.log(map);
-//tooltip
-
-var tooltip = document.getElementById('tooltip');
-var overlayed = new _Overlay.default({
-  element: tooltip,
-  offset: [10, 0],
-  positioning: 'bottom-left'
 });
-map.addOverlay(overlayed);
-
-function displayTooltip(evt) {
-  var pixel = evt.pixel;
-  var feature = map.forEachFeatureAtPixel(pixel, function (feature) {
-    return feature;
-  });
-  tooltip.style.display = feature ? '' : 'none';
-
-  if (feature) {
-    overlay.setPosition(evt.coordinate);
-    tooltip.innerHTML = feature.get('name');
-  }
-}
-
-;
-map.on('pointermove', displayTooltip);
+map.on('click', function (e) {
+  console.log(e);
+}); // var element = document.getElementById('popup');
+// var popup = new Overlay({
+//   element: element,
+//   positioning: 'bottom-center',
+//   stopEvent: false,
+//   offset: [0, -10],
+// });
+// map.addOverlay(popup);
+// console.log("over");
+// function formatCoordinate(coordinate) {
+//     return ("\n    <table>\n      <tbody>\n        <tr><th>lon</th><td>" + (coordinate[0].toFixed(2)) + "</td></tr>\n        <tr><th>lat</th><td>" + (coordinate[1].toFixed(2)) + "</td></tr>\n      </tbody>\n    </table>");
+//   }
+//   map.on('click', function (event) {
+//     var feature = map.getFeaturesAtPixel(event.pixel)[0];
+//     if (feature) {
+//       var coordinate = feature.getGeometry().getCoordinates();
+//       popup.setPosition(coordinate);
+//       $(element).popover({
+//         container: element.parentElement,
+//         html: true,
+//         sanitize: false,
+//         content: formatCoordinate(coordinate),
+//         placement: 'top',
+//       });
+//       $(element).popover('show');
+//     } else {
+//       $(element).popover('dispose');
+//     }
+//   });
 },{"ol/ol.css":"node_modules/ol/ol.css","ol":"node_modules/ol/index.js","ol/layer/Tile":"node_modules/ol/layer/Tile.js","ol/source/OSM":"node_modules/ol/source/OSM.js","ol/layer/Vector":"node_modules/ol/layer/Vector.js","ol/source/Vector":"node_modules/ol/source/Vector.js","ol/format/GeoJSON":"node_modules/ol/format/GeoJSON.js","ol/Overlay":"node_modules/ol/Overlay.js","ol/style":"node_modules/ol/style.js","ol/geom/Point":"node_modules/ol/geom/Point.js","ol/Feature":"node_modules/ol/Feature.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -58679,7 +58685,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50220" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57975" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -318,26 +318,41 @@ var map = new Map({
         })
     })],
 });
-//console.log(map);
+map.on('click', function(e){
+    console.log(e);
+})
 
-//tooltip
-var tooltip = document.getElementById('tooltip');
-var overlayed = new Overlay({
-  element: tooltip,
-  offset: [10, 0],
-  positioning: 'bottom-left'
-});
-map.addOverlay(overlayed);
 
-function displayTooltip(evt) {
-  var pixel = evt.pixel;
-  var feature = map.forEachFeatureAtPixel(pixel, function(feature) {
-    return feature;
-  });
-  tooltip.style.display = feature ? '' : 'none';
-  if (feature) {
-    overlay.setPosition(evt.coordinate);
-    tooltip.innerHTML = feature.get('name');
-  }
-};
-map.on('pointermove', displayTooltip);
+// var element = document.getElementById('popup');
+
+// var popup = new Overlay({
+//   element: element,
+//   positioning: 'bottom-center',
+//   stopEvent: false,
+//   offset: [0, -10],
+// });
+// map.addOverlay(popup);
+// console.log("over");
+
+// function formatCoordinate(coordinate) {
+//     return ("\n    <table>\n      <tbody>\n        <tr><th>lon</th><td>" + (coordinate[0].toFixed(2)) + "</td></tr>\n        <tr><th>lat</th><td>" + (coordinate[1].toFixed(2)) + "</td></tr>\n      </tbody>\n    </table>");
+//   }
+
+//   map.on('click', function (event) {
+//     var feature = map.getFeaturesAtPixel(event.pixel)[0];
+//     if (feature) {
+//       var coordinate = feature.getGeometry().getCoordinates();
+//       popup.setPosition(coordinate);
+//       $(element).popover({
+//         container: element.parentElement,
+//         html: true,
+//         sanitize: false,
+//         content: formatCoordinate(coordinate),
+//         placement: 'top',
+//       });
+//       $(element).popover('show');
+//     } else {
+//       $(element).popover('dispose');
+//     }
+//   });
+  
