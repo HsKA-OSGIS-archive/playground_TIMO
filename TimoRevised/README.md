@@ -65,3 +65,5 @@ Access-Control-Request-Method,Access-Control-Request-Headers</param-value>
 if the problem due to CORS still remains, run the following code
 chrome.exe --user-data-dir="C://Chrome dev session" --disable-web-security
 
+"© OpenStreetMap contributors" The project has used data from OpenStreetMap for the region of Karlsruhe to be used in PostGIS, based on this copyright terms: https://www.openstreetmap.org/copyright
+
