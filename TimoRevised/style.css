@@ -1,0 +1,47 @@
+
+    .info{
+      width: 500px; 
+      background-color:green;
+      padding: 5px 10px 5px 10px;
+      text-align: justify;
+    }
+  .nav-side-menu{
+    background-color: darkgrey;
+  }
+  .map {
+    height: 500px;
+    width: 100%;
+  }
+  .brand{
+    display: none;
+  }
+  .navbar{
+    background-color: #1cad35;
+  }
+  .dropdown-item{
+    background-color: #1cad35;
+  }
+  .overlay-container{
+    background-color: bisque;
+   } 
+   .overlay-text{
+       padding:1px;
+       color: rgb(14, 14, 12);
+       width: 15rem;
+       margin:1px;
+       background-color: rgb(202, 213, 223);
+       word-wrap: break-word;
+       font-size:x-small; 
+   }
+
+  @media screen and (min-width: 768px) {
+     .overlay-text{
+       font-size:small;
+     }
+      
+  } 
+  
+  
+ 
+
+   
